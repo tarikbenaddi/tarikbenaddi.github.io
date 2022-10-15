@@ -222,3 +222,13 @@ hr {
 .clip-circle {
   clip-path: circle(75px at center);
 }
+
+.mypic {
+  width: 250px;
+  height: 250px;
+  background: url(../assets/mypic.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+}
