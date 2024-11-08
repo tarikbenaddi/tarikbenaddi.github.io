@@ -20,6 +20,9 @@ published: true
 * Amazing [list](http://danaernst.com/resources/free-and-open-source-textbooks/?utm_source=pocket_mylist) of free and/or open-source technical textbooks.
 
 
+### Worth reading
+* [Gödel letter to von Neumann](https://www.karlin.mff.cuni.cz/~krajicek/goedel-letter.pdf) on Turing machine complexity and Growth Rate question (1956)
+
 ### On optimistic research
 * [Principles of Effective Research](https://www.bumc.bu.edu/preventive-med/files/2020/06/Principls-of-effective-reserache-nielsen-0404.pdf) by Michael A. Nielsen (2004)
 
