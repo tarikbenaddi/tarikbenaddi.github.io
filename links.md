@@ -24,6 +24,7 @@ published: true
 * [Gödel letter to von Neumann](https://www.karlin.mff.cuni.cz/~krajicek/goedel-letter.pdf) on Turing machine complexity and Growth Rate question (1956)
 
 ### On optimistic research
+* [research as leisure activity](https://www.personalcanon.com/p/research-as-leisure-activity) by CELINE NGUYEN (2024)
 * [Principles of Effective Research](https://www.bumc.bu.edu/preventive-med/files/2020/06/Principls-of-effective-reserache-nielsen-0404.pdf) by Michael A. Nielsen (2004)
 
 * [You and Your Research](https://www.bumc.bu.edu/preventive-med/files/2020/06/Principls-of-effective-reserache-nielsen-0404.pdf) by Richard Hamming (1986)
@@ -37,6 +38,8 @@ published: true
 * [What Would It Take to Recreate Bell Labs?](https://www.construction-physics.com/p/what-would-it-take-to-recreate-bell) by Brian Potter (2024)
 
 ### On pessimistic research
+* [Don't publish with IEEE!](https://cr.yp.to/writing/ieee.html) by D. J. Bernstein.
+
 * [Allons-nous continuer la recherche scientifique?](https://www.youtube.com/watch?v=ZW9JpZXwGXc) by Alexander Grothendieck (1972)
 
 * [Le piège abscons de la recherche scientifique](https://polaris.imag.fr/romain.couillet/docs/articles/piege_abscons.pdf) by Romain Couillet (2022)
