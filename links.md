@@ -17,7 +17,7 @@ published: true
 
 * A list of useful/important tools, best practices, tips and other guidelines when writing scientific papers can be found [here](https://github.com/Wookai/paper-tips-and-tricks#tables).
 
-* Amazing [list](http://danaernst.com/resources/free-and-open-source-textbooks/?utm_source=pocket_mylist) of free and/or open-source technical textbooks.
+* Interesting [list](http://danaernst.com/resources/free-and-open-source-textbooks/?utm_source=pocket_mylist) of free and/or open-source technical textbooks.
 
 
 ### Worth reading
