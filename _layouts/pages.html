@@ -1,0 +1,58 @@
+<html>
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WQKJZ9BV');</script>
+        <!-- End Google Tag Manager -->
+        
+    <title>{{ page.title }}</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Tarik Benaddi website.'>
+    <meta name='keywords' content='{{ page.keywords }}'>
+    <meta name='author' content='Tarik Benaddi'>
+
+    <link href='/css/blog.css' rel='stylesheet'/>
+    <link href='/css/trac.css' rel='stylesheet'/>
+    <link href='/css/markdown.css' rel='stylesheet'/>
+
+    {% include mathjax.html %}
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQKJZ9BV"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+            
+<div class='content'>
+    {% include nav.html %}
+    <div id='posts' class='section'>
+        <div class='wrap'>
+            <h2>{{ page.title }}</h2>
+        </div>
+
+        <div class='wrap article'>
+            {{ content }}
+        </div>
+    </div>
+
+    <!--div align="center" class="not-active">
+        <div class="clip-circle">
+        <div id="globe">
+            <script type="text/javascript" src="//rf.revolvermaps.com/0/0/2.js?i=57txnb05u31&amp;m=0&amp;s=178&amp;c=ff0000&amp;t=1" async="async"></script>
+        </div>
+        </div>
+    </div-->
+    
+</div>
+
+
+
+
+</body>
+</html>

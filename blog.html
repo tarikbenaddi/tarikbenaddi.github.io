@@ -1,0 +1,92 @@
+---
+title: blog
+---
+
+<html>
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WQKJZ9BV');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Tarik Benaddi</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Tarik Benaddi website.'>
+    <meta name='keywords' content='
+        machine learning,
+        statistical machine learning,
+        bayesian inference,
+        statistics,
+        computational statistics,
+        linear algebra,
+        numerical linear algebra,
+        statistical software,
+        deep learning,
+        computer science
+    '>
+    <meta name='author' content='Tarik Benaddi'>
+
+    <link rel='shortcut icon' href='/favicon.png?v=e' />
+    <link href='/css/blog.css' rel='stylesheet'/>
+
+    {% include mathjax.html %}
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQKJZ9BV"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {% include nav.html %}
+    <div id='blog' class='wrap'>
+        
+        <div id='intro'>
+            
+
+
+            <div class='quote' align="center">
+                <p>It takes a heap of sense to write good nonsense.</p>
+                <a href='https://en.wikipedia.org/wiki/Mark_Twain' target='_blank'>Mark Twain — American writer</a>
+            </div>
+        </div>
+
+        <!-- Le but de cette section est de partagé aussi bien du contenu technique que nontechniques. Souvent c'est des réponses à des questions qui me sont souvent posées par les étudiants. Au lieu (ou en plus) d'essayer de leur apporter une réponse orale rapide, je préfère leur indiqué le lien de tel ou tel article. L'autre type d'article c'est plutôt des questions que je me pose et qui ont occupé ma curiosité un certain moment. Contrairement aux autres sections de ce site, celle ci est en français. Et cela a deux raisons principales: (i) je veux contrinuer à enrichir le contenu scientifique français sur des sujets qui sont en général alrgement abordé dans la sphère anglophone et (ii) -->
+
+        <div id='posts' class='section'>
+            {% for post in site.posts %}
+                <div class='post-row'>
+                    <p class='post-title'>
+                        <a href="{{ post.url }}">
+                            {% katexmm %}
+                            {{ post.title }}
+                            {% endkatexmm %}
+                        </a>
+                    </p>
+                    <p class='post-date'>
+                        {{ post.date | date_to_long_string }}
+                    </p>
+                </div>
+                <p class='post-subtitle'>
+                    {% katexmm %}
+                    {{ post.subtitle }}
+                    {% endkatexmm %}
+                </p>
+                <span class='hidden'>{{ forloop.index }}</span>
+            {% endfor %}
+        </div>
+
+        <!--div align="center" class="not-active">
+            <div class="clip-circle">
+            <div id="globe">
+                <script type="text/javascript" src="//rf.revolvermaps.com/0/0/2.js?i=57txnb05u31&amp;m=0&amp;s=178&amp;c=ff0000&amp;t=1" async="async"></script>
+            </div>
+            </div>
+        </div-->
+    </div>
+</body>
+</html>
