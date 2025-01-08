@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<header class="site-masthead">
+  {% include menu.html %}
+</header>
+
+<main class="home" id="main" role="main" aria-label="Content">
+  <h1 class="content-title divided">Blog</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post-list-item">
+        <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <a href="{{ post.url | relative_url }}" class="post-link">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+    <div class="post-pagination">
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="pagination-next btn">&lang;&nbsp;Older</a>
+      {% else %}
+        <span>&nbsp;</span>
+      {% endif %}
+      <span class="pagination-number">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="pagination-previous btn">Newer&nbsp;&rang;</a>
+      {% else %}
+        <span>&nbsp;</span>
+      {% endif %}
+    </div>
+  {% endif %}
+</main>

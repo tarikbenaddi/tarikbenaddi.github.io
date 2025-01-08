@@ -1,0 +1,335 @@
+body {
+  background: $brand-color;
+  color: $text-color;
+  font-family: $font-family;
+  font-size: 1.3125em;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3em;
+  margin: .5em auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 1em auto;
+  //text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 1.3333em auto;
+  //text-align: center;
+}
+
+h4 {
+  font-size: 1.25em;
+  font-style: italic;
+  margin: 1.875em auto;
+  //text-align: center;
+}
+
+h5 {
+  font-size: 1em;
+  font-style: italic;
+  margin: 2em auto;
+  //text-align: center;
+}
+
+h6 {
+  font-size: .875em;
+  font-style: italic;
+  margin: 2.25em auto;
+  //text-align: center;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a {
+  color: $text-color;
+}
+
+a:focus {
+  outline: 1px dashed $text-color;
+}
+
+blockquote {
+  margin: 2em auto;
+  opacity: .8;
+  > * {
+    padding: 0 3em;
+  }
+}
+
+blockquote.epigraph {
+  font-style: italic;
+}
+
+small {
+  font-size: .75em;
+}
+
+p > cite {
+  display: block;
+  text-align: right;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  @include divider;
+  margin: 4em 0;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  margin: 2em auto;
+}
+
+figure img {
+  margin: 2em auto 1em;
+}
+
+figcaption {
+  font-size: .875em;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2em;
+  opacity: .7;
+}
+
+.divided::after {
+  content: "";
+  @include divider;
+}
+
+.home {
+  max-width: 35em;
+  margin: auto;
+  padding: 4em 1em;
+}
+
+.content-title {
+  font-size: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.post-date {
+  color: $muted-text-color;
+  display: block;
+  font-size: .825em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  .post-link & {
+    padding: .5em 0;
+  }
+}
+
+.site-credits {
+  margin: 0 auto 2em;
+  padding: 0 2em;
+  text-align: center;
+}
+
+.skip-navigation {
+  background: $brand-color;
+  border: 1px dashed transparent;
+  display: block;
+  font-size: .875em;
+  font-weight: 700;
+  margin-top: -2.625rem;
+  padding: .5rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover,
+  &:focus {
+    background: lighten($brand-color, 2.5%);
+    border-color: $text-color;
+    margin-top: 0;
+  }
+}
+
+// Added
+.quote_header {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.4em;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.bullet_entry {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 2em;
+}
+
+.bullet_entry_normal {
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 2em;
+}
+
+.bullet_details {
+  font-size: 17px;
+  font-style: normal;
+  margin-left: 2.5em;
+}
+
+// timeline
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 220px;
+  width: 2px;
+  background: #ccc;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-logo {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.timeline-point {
+  position: absolute;
+  left: 213px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #ccc;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 90px;
+  top: 28px;
+  width: 110px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.timeline-content {
+  margin-left: 250px;
+  background: #534747;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.timeline-personal-image {
+  float: right;
+  width: 150px;
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: 1px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.timeline-personal-image img {
+  width:150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+}
+
+.timeline-content h4 {
+  margin-top: 5px;
+  color: #a49b9b;
+  font-size: 20px;
+}
+
+.timeline-content p {
+  margin-top: 10px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 30px; /* Adjusted to make room for "Present" */
+  bottom: 0;
+  left: 220px;
+  width: 2px;
+  background: #534747;
+}
+
+.timeline-present {
+  position: absolute;
+  top: 0;
+  left: 220px;
+  transform: translateX(-50%);
+  background-color: #534747;
+  padding: 5px 10px;
+  font-weight: bold;
+  z-index: 1;
+  border-radius: 10px;
+}
+.timeline-content a {
+  color: #0066cc; /* Or any color you prefer */
+  text-decoration: none;
+}
+
+.timeline-content a:hover {
+  text-decoration: underline;
+}
+
+.mypic {
+  width: 130px;
+  height: 130px;
+  background: url("/assets/timeline/mypic.png");
+  background-size: 100% 100%;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+  margin-right: 30px;
+}
