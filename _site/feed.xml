@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tarik Benaddi</title>
+    <description>Tarik Benaddi</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed/index.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 31 Jan 2025 23:13:14 +0100</pubDate>
+    <lastBuildDate>Fri, 31 Jan 2025 23:13:14 +0100</lastBuildDate>
+    <generator>Jekyll v4.3.4</generator>
+    
+      
+        <item>
+          
+            <title>The Lognormal Distribution</title>
+          
+          <author> (Tarik Benaddi)</author>
+          <description>
+            &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The Normal distribution is often presented as a universal approximation for a wide range of phenomena, from the height of the population in a country to the weight of apples in a bag, and even income distribution or asset prices in stock markets. In wireless communications, the Normal distribution serves as the first approximation for various noise sources.&lt;/p&gt;
+
+&lt;p&gt;However, a closer look reveals a fundamental inconsistency: the domain of a Normal random variable spans from \(-\infty\) to \(+\infty\). Sure the probabilties at the boundaries get very small, still the mentionned real-world quantities, such as height or stocks prices, cannot never be negative…&lt;/p&gt;
+
+&lt;p&gt;XXX figure normal&lt;/p&gt;
+
+&lt;!-- excerpt_separator --&gt;
+
+&lt;p&gt;In statistics, there exists a less popular but equally powerful distribution that addresses this issue: the Lognormal distribution. Unlike the Normal distribution, the Lognormal ensures that all values are non-negative, making it a better first approximation for data where negative values are physically impossible.&lt;/p&gt;
+
+&lt;p&gt;Back to wireless communications, while additive Gaussian noise is widely used due to its simplicity and mathematical tractability (thanks to nice properties like the independence of mean and variance, symmetry, the Gaussian integral, Gaussian stability with respect to  convolution/product/Fourier transform…, …), it doesn’t always align with observations. And the use of Additive Gaussian noise to model this noise is often justified by the Central Limit Theorem (CLT)&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, which states that the sum of many independent, identically distributed random variables tends to follow a Normal distribution.&lt;/p&gt;
+
+&lt;p&gt;However, this additive assumption doesn’t hold in all systems. In some cases, noise is not additive but rather multiplicative. Take free-space optical communications as an example. Here, atmospheric turbulence causes by scintillation results in a multiplicative effects on the signal intensity. The received signal power, say \(q(t)\), is the product of the transmitted power \(p(t)\) and a multiplicative noise term \(n(t)\), which itself may be the product of several independent noise factors: \(n(t) = n_1(t) \times n_2(t) \times \dots\)&lt;/p&gt;
+
+&lt;p&gt;In such cases, we would like to have an equivalent of the Central Limit Theorem (CLT) that applies to the product of a large number of random variables instead of their sum. It turns out that deriving such theorem is not straightforward and is only addressed in specific cases in the literature. The Lognormal distribution hence emerges as an interesting workaround for our case.&lt;/p&gt;
+
+&lt;h2 id=&quot;construction&quot;&gt;Construction&lt;/h2&gt;
+&lt;p&gt;Let us consider the signal model \(q = y \cdot p\), where the random variable \(Y = \prod_{i=1}^n Y_i\), and \(Y_i\) are independent, identically distributed (i.i.d.) strictly positive random variables (time dependency is omitted for notational simplicity).&lt;/p&gt;
+
+&lt;p&gt;The key idea behind deriving the Lognormal distribution lies in transforming the multiplicative noise model into an additive one by moving to the logarithmic domain. By taking the natural logarithm of both sides, we obtain:&lt;/p&gt;
+
+\[\ln(q) = \sum_{i=1}^n \ln(Y_i) + \ln(p)\]
+
+&lt;p&gt;Of course this holds for strictly positive values, think of signal power levels for example or stock prices. This transformation gives another signal model where the new signal of interest, \(\ln(p)\), is corrupted by an additive noise equal to \(\sum_{i=1}^n \ln(Y_i)\).&lt;/p&gt;
+
+&lt;p&gt;Since \(\{\ln(Y_i)\}_i\) are i.i.d. random variables, by classical CLT again, the summation tends to follow a Normal distribution as \(n\) goes to infinity. Hence we say that \(X\), \((\triangleq e^{Y})\), is Lognormally distributed.&lt;/p&gt;
+
+&lt;p&gt;With an abuse of notation,  we can write \(\log\mathcal{N}(\mu, \sigma^2) \triangleq e^{\mathcal{N}(\mu, \sigma^2)}\), which is quite misleading: the Lognormal distribution is actually taking the exponential of a normal distribution, “Lognormal” should be understood as “Normal in the sense of the log” and not “the log of a normal distirbution”.&lt;/p&gt;
+
+&lt;h2 id=&quot;probability-density-function&quot;&gt;Probability Density Function&lt;/h2&gt;
+&lt;p&gt;Let \(Y \sim \mathcal{N}(\mu, \sigma^2)\), and we seek the probability density function (PDF) of \(X = e^Y\). The PDF of \(Y\) is given by&lt;/p&gt;
+
+\[f_Y(y) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(y - \mu)^2}{2\sigma^2}\right)\]
+
+&lt;p&gt;Now consider the transformation \(h: x \mapsto e^x\) and its inverse \(h^{-1}: x \mapsto \ln(x)\). This gives&lt;/p&gt;
+
+\[X = h(Y) = e^Y \text{ and }Y = h^{-1}(X) = \ln(X)\]
+
+&lt;p&gt;Since \(X = h(Y)\) is a continuous random variable and \(h^{-1}\) is strictly monotone, the transformation theorem&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;  yields:&lt;/p&gt;
+
+\[f_X(x) = f_Y(h^{-1}(x)) \cdot \left|\frac{dh^{-1}(x)}{dx}\right| \quad \text{for } x \in \mathbb{R}^{+*}\]
+
+&lt;p&gt;After simplification, we obtain the PDF of the Lognormal distribution as:&lt;/p&gt;
+
+\[f_X(x) = \frac{1}{x\sigma\sqrt{2\pi}} \exp\left(-\frac{(\ln(x) - \mu)^2}{2\sigma^2}\right), \quad x &amp;gt; 0\]
+
+&lt;p&gt;Some observations here:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;it has the same form as the PDF of the Normal distribution, but with \(x\) replaced by \(\ln(x)\) and the whole scaled by \(x\).&lt;/li&gt;
+  &lt;li&gt;the PDF of the Lognormal distribution is not symmetric, unlike the Normal distribution: since \(X\) is always positive, it cannot exhibit the symmetry characteristic of the Normal distribution.&lt;/li&gt;
+  &lt;li&gt;Finally, notice that the support of a Lognormal distribution is \(]0,+\infty[\). Hence \(c+Y, c\in\mathbb{R}\) can’t be a lognormal.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;cumulative-distribution-function&quot;&gt;Cumulative distribution function&lt;/h2&gt;
+
+&lt;p&gt;The cumulative distribution function (CDF) of the Normal distribution is given by:&lt;/p&gt;
+
+\[F_Y(y) = \int_{-\infty}^y \mathcal{N}(t; \mu, \sigma^2) \, dt = \frac{1}{2} \left[1 + \text{erf}\left(\frac{y - \mu}{\sqrt{2}\sigma}\right)\right]\]
+
+&lt;p&gt;where \(\text{erf}(x) = \frac{2}{\sqrt{\pi}} \int_0^x \exp(-t^2) \, dt\)&lt;/p&gt;
+
+&lt;p&gt;We can compute its CDF, following a similar derivation and variable substitution for the Lognormal distribution. Given the PDF of the Lognormal distribution:&lt;/p&gt;
+
+\[f_X(x) = \frac{1}{x\sigma\sqrt{2\pi}} \exp\left(-\frac{(\ln(x) - \mu)^2}{2\sigma^2}\right), \quad x &amp;gt; 0\]
+
+&lt;p&gt;Using the substitution \(t' = \ln(t)\), we have \(dt' = \frac{1}{t} dt\), and the CDF integral transforms as follows:&lt;/p&gt;
+
+\[F_X(x) = \int_{-\infty}^{\ln(x)} \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(y - \mu)^2}{2\sigma^2}\right) \, dy\]
+
+&lt;p&gt;This integral is identical in form to the CDF of the Normal distribution, but with the upper limit \(\ln(x)\) instead of \(x\). Therefore, the CDF of the Lognormal distribution can be simplified to:&lt;/p&gt;
+
+\[F_X(x) = \frac{1}{2} \left[1 + \text{erf}\left(\frac{\ln(x) - \mu}{\sqrt{2}\sigma}\right)\right]\]
+
+&lt;p&gt;At first glance, this result may seem counterintuitive, as it appears to simply substitute \(x\) with \(\ln(x)\) in the Normal CDF. But actually becomes clear since \(P(X \leq x)\) is equivalent to \(P(Y \leq \ln(x))\). This connection makes another more straightforward derivation of the CDF without resorting to the PDF.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-moments&quot;&gt;Some Moments&lt;/h2&gt;
+&lt;p&gt;Using the same integration techniques as in the Normal distribution case, we can derive key properties of the Lognormal distribution:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Expectation:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(Y \sim \mathcal{N}(\mu, \sigma^2)\), the expectation is \(E[Y] = \mu\)&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(X = e^Y\), the expectation is:&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+\[E[X] = \int_0^\infty x f_X(x) \, dx = \exp\left(\mu + \frac{1}{2}\sigma^2\right)\]
+  &lt;/li&gt;
+  &lt;li&gt;Variance:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(Y\), the variance is \(\text{Var}(Y) = \sigma^2\).&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(X\), the variance is:&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+\[\text{Var}(X) = E[(X - E(X))^2] = e^{2\mu}\left(e^{2\sigma^2} - e^{\sigma^2}\right)\]
+  &lt;/li&gt;
+  &lt;li&gt;Median:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(Y\), the median is \(\text{med}(Y) = \mu\).&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(X\), the median is \(\text{med}(X) = e^\mu\)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mode:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(Y\), the mode is  \(\text{mod}(Y) = \mu\).&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;For \(X\), the mode is \(\text{mod}(X) = e^{\mu} e^{-\sigma^2}\)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We see that the mean and variance of the Lognormal distribution depend on both \(\mu\) and \(\sigma^2\) of the underlying Normal distribution. Also, unlike the Normal distribution where the mean and the median are equaln the Lognormal distirbution is asymmetry. Which causes a skew to the right, with a long tail extending to the left toward larger values.&lt;/p&gt;
+
+&lt;p&gt;XXX graph lognormal with mode median etc&lt;/p&gt;
+
+&lt;h2 id=&quot;interpretation-of-emu-and-esigma2&quot;&gt;Interpretation of \(e^\mu\) and \(e^{\sigma^2}\)&lt;/h2&gt;
+
+&lt;p&gt;We saw that where \(\mu\) is the median \(\mathcal{N}(\mu, \sigma^2)\), \(e^\mu\) is the median of \(Y \sim \ln\mathcal{N}(\mu,\sigma^2)\). However, the variance of \(\ln\mathcal{N}(\mu,\sigma^2)\) is not \(e^{\sigma^2}\). What may this quantity represent? It turns out that \(e^{\sigma^2}\) does not have an easy interpretation, but still it is related to the scale/dispersion of the distribution. Actually, the Lognormal distribution has a natural connection to geometric measures due to its multiplicative nature. Specifically:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The geometric expectation of \(X\) is nothing but the exponential of the arithmetic expectation of \(Y\) since:&lt;/li&gt;
+&lt;/ul&gt;
+
+\[\text{GE}(X) = \left(\prod_i x_i\right)^{\frac{1}{n}} = \left(\prod_i e^{y_i}\right)^{\frac{1}{n}} = \exp\left(\frac{1}{n}\sum_i y_i\right) = e^\mu\]
+
+&lt;ul&gt;
+  &lt;li&gt;Same for the geometric variance of \(X\) where \(\text{GV}(X) = e^{\sigma^2}\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The geometric expectation is particularly useful in contexts where the underlying process is multiplicative rather than additive. For example, in finance, the geometric mean is used to calculate average rates of return over time, since investment returns compound exponentially.&lt;/p&gt;
+
+&lt;p&gt;Another interesting observation that exhibits the quantity \(e^{\sigma^2}\) is the ratio between the arithmetic mean and the geometric mean (AM-GM ratio) of \(X\):&lt;/p&gt;
+
+\[\left(\frac{\text{AM}(X)}{\text{GM}(X)}\right)^2 = \left(\frac{\exp(\mu + \frac{\sigma^2}{2})}{\exp(\mu)}\right)^2 = e^{\sigma^2}\]
+
+&lt;p&gt;A slightly different ratio is interesting when computing the so-called coefficient of variation&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; (\(C\)):&lt;/p&gt;
+
+\[C=\frac{\sqrt{Var(X)}}{E[X]}=\sqrt{e^{\sigma^2}-1}\]
+
+&lt;p&gt;\(C\) is a valuable metric as it is more context agnostic in comparison to the standard deviation: unlike the standard deviation, the CV is a dimensionless number and this property makes it particularly useful for comparing variability across different data sets with varying units or significantly different means.&lt;/p&gt;
+
+&lt;h2 id=&quot;moment-generating-function&quot;&gt;Moment generating function&lt;/h2&gt;
+&lt;p&gt;The moments of a distribution can be derived using the moment generating function (MGF), defined as:&lt;/p&gt;
+
+\[M_Y(t) = E[e^{tY}] = E[X^t] = \exp\left( \mu t + \frac{1}{2}\sigma^2 t^2\right) , \quad t \in \mathbb{N}\]
+
+&lt;p&gt;An interesting propoerty of the Lognormal distribution is that while it has finite moments of all orders \((M_Y(t) \in \mathbb{R}, \forall t \in \mathbb{N})\), its MGF is not defined elsewhere.&lt;/p&gt;
+
+&lt;h2 id=&quot;entropy&quot;&gt;Entropy&lt;/h2&gt;
+
+&lt;p&gt;Computing the entropy, or “surprise meter”, is of interest in statistics as it quantifies the amount of information we get from sampling a PDF. The differential entropy of a random variable \(X\) is defined as:&lt;/p&gt;
+
+\[h(X) = -E[\ln f_X]\]
+
+&lt;p&gt;As we have seen, for a Lognormal distribution, the PDF is given by:&lt;/p&gt;
+
+\[f_X(x) = \frac{1}{x\sigma\sqrt{2\pi}} \exp\left(-\frac{(\ln x - \mu)^2}{2\sigma^2}\right)\]
+
+&lt;p&gt;Taking the logarithm of \(f_X(x)\) and after simplification:&lt;/p&gt;
+
+\[\ln f_X(x) = -\frac{1}{2}\ln(2\pi\sigma^2) - \ln(x) - \frac{(\ln x - \mu)^2}{2\sigma^2}\]
+
+&lt;p&gt;Using this and the fact that \(\log(X) \sim \mathcal{N}(\mu, \sigma^2)\) we obtain:&lt;/p&gt;
+
+\[h(X) = -E[\ln f_X(x)] = E\left[\frac{1}{2}\ln(2\pi\sigma^2) + \ln(x) + \frac{(\ln x - \mu)^2}{2\sigma^2}\right]=\frac{1}{2}\ln(2e\pi\sigma^2) + \mu\]
+
+&lt;p&gt;Observe that the entropy of the Lognormal distribution is a translated version of the entropy of the Normal distribution by the mean \(\mu\).&lt;/p&gt;
+
+&lt;p&gt;The entropy of the Lognormal distribution depends on \(\mu\) since the widening of its PDF, and hence the amount of “surprise” of the Lognormal distribution, varies with \(\mu\). At the contrary, for the normal distribution, the \(\mu\) just translates the distribution as it is without any change in probabilities.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, while the entropy of the Normal distribution depends only on the variance \(\sigma^2\), for the Lognormal distribution, the entropy depends on both the mean \(\mu\) and the variance \(\sigma^2\) of the underlying Normal distribution.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Central_limit_theorem&quot;&gt;https://en.wikipedia.org/wiki/Central_limit_theorem&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.cl.cam.ac.uk/teaching/2002/Probability/prob11.pdf&quot;&gt;https://www.cl.cam.ac.uk/teaching/2002/Probability/prob11.pdf&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Coefficient_of_variation&quot;&gt;https://en.wikipedia.org/wiki/Coefficient_of_variation&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+          </description>
+          <pubDate>Fri, 31 Jan 2025 00:00:00 +0100</pubDate>
+          <link>http://localhost:4000/statistics/2025/01/31/lognormal.html</link>
+          <guid isPermaLink="true">http://localhost:4000/statistics/2025/01/31/lognormal.html</guid>
+          
+          
+          <category>Statistics</category>
+          
+        </item>
+      
+    
+  </channel>
+</rss>

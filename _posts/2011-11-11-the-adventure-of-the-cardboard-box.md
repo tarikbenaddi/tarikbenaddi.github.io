@@ -3,7 +3,7 @@ title: The Adventure of the Speckled Band
 author: Arthur Conan Doyle
 category: literature
 layout: post
-published: true
+published: false
 ---
 
 On glancing $$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$ over my notes of the seventy odd cases in which I have during the last eight years studied the methods of my friend Sherlock Holmes, I find many tragic, some comic: 
