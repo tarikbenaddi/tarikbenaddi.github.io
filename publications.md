@@ -13,6 +13,14 @@ published: true
 
 ### Journals
 
+
+<div class='bullet_entry'>
+    <li>Model-free Neural Decoding for Bit-Interleaved Coded Modulations</li>
+    <div class='bullet_details'>
+    G. de Boni Rovella, M. Benammar, <u>T. Benaddi</u>, H. Meric, submitted to IEEE Transactions on Communications 2025
+    </div>
+</div>
+
 <div class='bullet_entry'>
     <li>Delay Optimization of Conventional Non-Coherent Differential CPM Detection</li>
     <div class='bullet_details'>
@@ -45,10 +53,49 @@ published: true
 
 
 ### International conferences
+
+<div class='bullet_entry'>
+    <li>Photonics for Communications Satellites: A Perspective from Thales Alenia Space</li>
+    <div class='bullet_details'>
+        M. Sotom, R. Aymeric, B. Benazet, <u>T. Benaddi</u>; M. Bertrand; P. Besancenot et. al., IEEE European Conference on Optical Communications (ECOC), Copenhagen, Denmark, October 2025
+    </div>
+</div>
+
+
+
+<div class='bullet_entry'>
+    <li>Up to 200G Coherent COTS Evaluation against Atmospheric Dynamic Fadings</li>
+    <div class='bullet_details'>
+        Anaelle Maho; Lisa Tonnelier, Dorian Montagut, <u>Tarik Benaddi</u>, Gauthier Bechet, Simon Lévêque et. al., IEEE International Conference on Space Optical Systems and Applications (ICSOS), Kyoto, Japan, October 2025
+    </div>
+</div>
+
+
+<div class='bullet_entry'>
+    <li>Thales Alenia Space Technology Roadmap toward Cross Atmosphere High Data Rate Optical Links</li>
+    <div class='bullet_details'>
+        <u>Tarik Benaddi</u>, Anaelle Maho, Mickael Faugeron, Arnaud Le Kernec et. al., IEEE International Conference on Space Optical Systems and Applications (ICSOS), Kyoto, Japan, October 2025
+    </div>
+</div>
+
+<div class='bullet_entry'>
+    <li>Optimizing the Parity-Check Matrix for Syndrome-Based Neural Decoders</li>
+    <div class='bullet_details'>
+        G. de Boni Rovella, M. Benammar, <u>T. Benaddi</u>, H. Meric, IEEE PIMRC,  Istanbul, Türkiye, September 2025
+    </div>
+</div>
+
+<div class='bullet_entry'>
+    <li>High-Optical-Output Power Transmissions for Tbps GEO Feeder Links</li>
+    <div class='bullet_details'>
+        Anaëlle Maho, Omar El Marzougui, Yannik Horst, <u>Tarik Benaddi</u>, Simon Lévêque, et. al., International Conference on Space Optics (ICSO), Antibes Juan-les-Pins, France, 2024
+    </div>
+</div>
+
 <div class='bullet_entry'>
     <li>Optical Feeder Links to GEO-based Satellites: a Focus on Space Optical Terminals</li>
     <div class='bullet_details'>
-        R. Auribault, G. Baister, <u>T. Benaddi</u> et al, International Conference on Space Optics (ICSO), Juan-les-pins, France, October 2024
+        Bernard Charrat, Baptiste Marchand, Romain Auribault, Guy Baister, <u>Tarik Benaddi</u>, et. al., International Conference on Space Optics (ICSO), Juan-les-pins, France, October 2024
     </div>
 </div>
 
@@ -182,10 +229,18 @@ published: true
 
 ### Patents
 <div class='bullet_entry'>
-    <li>Method for Analog Compensation of the Polarization-Dependant Loss</li>
+    <li>...</li>
+    <div class='bullet_details'>
+        <u>T. Benaddi</u><br>
+        status: Pending
+    </div>
+</div>
+
+<div class='bullet_entry'>
+    <li>Analog Compensation of the Polarization-Dependant Loss</li>
     <div class='bullet_details'>
         <u>T. Benaddi</u>, A. Lecointre, P. Potier<br>
-        status: pending
+        status: France, Europe, USA, Canada
     </div>
 </div>
 
@@ -193,7 +248,7 @@ published: true
     <li>Space System and Method of Wireless Communication by Transmission of Radio Frequency or Optical Signals via Return Path</li>
     <div class='bullet_details'>
         <u>T. Benaddi</u><br>
-        status: France (FR2305491), Europe (pending), USA (pending), Canada (pending)
+        status: France (FR2305491), Europe (24178564.1), USA (18/679,275), Canada (3239930)
     </div>
 </div>
 

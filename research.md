@@ -54,6 +54,14 @@ published: true
 
 ### PhD students
 <div class='bullet_entry_normal'>
+    <li>Advanced Communication schemes for satellite free space optical communications</li>
+    <div class='bullet_details'>
+        PhD Student: -- <br>
+        Thales Alenia Space & French Space Agency (CNES)
+    </div>
+</div>
+
+<div class='bullet_entry_normal'>
     <li>Machine learning base solutions for M2M satellite communications</li>
     <div class='bullet_details'>
         PhD Student: Gaston de Boni Rovella (2021-2024)<br>
@@ -85,7 +93,7 @@ published: true
 <div class='bullet_entry_normal'>
     <li>Various Thales Alenia Space projects</li>
     <div class='bullet_details'>
-        CNES, ESA, internal..., (2020-.)
+        Main projects: COOP (2022-2025), <a href="https://www.thalesaleniaspace.com/en/press-releases/thales-alenia-space-develop-solis-very-high-throughput-laser-communications">SOLiS</a> demonstrator (France 2030)
     </div>
 </div>
 
@@ -100,7 +108,7 @@ French Government Defense Agency (DGA)
 
 ### Graduate students
 <div class='bullet_entry'>
-    <li>TODO...</li>
+    <li>I typically supervise 1–3 engineering/master’s final-year students each year on various engineering and R&D projects.</li>
 </div>
 
 <!-- 
