@@ -45,7 +45,7 @@ published: true
 <div class='bullet_entry_normal'>
     <li>Machine learning applied to communications</li>
     <div class='bullet_details'>
-        Error correction code design, modulation
+        Joint error correction code and modulation design
     </div>
 </div>
 
@@ -56,7 +56,7 @@ published: true
 <div class='bullet_entry_normal'>
     <li>Advanced Communication schemes for satellite free space optical communications</li>
     <div class='bullet_details'>
-        PhD Student: -- <br>
+        PhD Student: "Open positon" (2026-2029)<br>
         Thales Alenia Space & French Space Agency (CNES)
     </div>
 </div>

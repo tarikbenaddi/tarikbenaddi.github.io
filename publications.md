@@ -13,7 +13,6 @@ published: true
 
 ### Journals
 
-
 <div class='bullet_entry'>
     <li>Model-free Neural Decoding for Bit-Interleaved Coded Modulations</li>
     <div class='bullet_details'>
@@ -50,6 +49,38 @@ published: true
 </div>
 
 
+### Patents
+<div class='bullet_entry'>
+    <li>To be added...</li>
+    <div class='bullet_details'>
+        <u>T. Benaddi</u><br>
+        status: submitted. Pending
+    </div>
+</div>
+
+<div class='bullet_entry'>
+    <li>Analog Compensation of the Polarization-Dependant Loss</li>
+    <div class='bullet_details'>
+        <u>T. Benaddi</u>, A. Lecointre, P. Potier<br>
+        status: France, Europe, USA, Canada
+    </div>
+</div>
+
+<div class='bullet_entry'>
+    <li>Space System and Method of Wireless Communication by Transmission of Radio Frequency or Optical Signals via Return Path</li>
+    <div class='bullet_details'>
+        <u>T. Benaddi</u><br>
+        status: France (FR2305491), Europe (24178564.1), USA (18/679,275), Canada (3239930)
+    </div>
+</div>
+
+<div class='bullet_entry'>
+    <li>Method for Generating a Filter Bank for Receiving a Signal Modulated by Continuous Phase Modulation, and Method for Receiving Said Signal</li>
+    <div class='bullet_details'>
+        <u>T. Benaddi</u>, C. Poulliat, M.-L. Boucheret, B. Gadat, G. Lesthievent<br>
+        status: France (FR3025386B1), Europe (EP2993847A1), USA (US9401829B2), Canada (CA2903065A1)
+    </div>
+</div>
 
 
 ### International conferences
@@ -227,38 +258,6 @@ published: true
 
 
 
-### Patents
-<div class='bullet_entry'>
-    <li>...</li>
-    <div class='bullet_details'>
-        <u>T. Benaddi</u><br>
-        status: Pending
-    </div>
-</div>
-
-<div class='bullet_entry'>
-    <li>Analog Compensation of the Polarization-Dependant Loss</li>
-    <div class='bullet_details'>
-        <u>T. Benaddi</u>, A. Lecointre, P. Potier<br>
-        status: France, Europe, USA, Canada
-    </div>
-</div>
-
-<div class='bullet_entry'>
-    <li>Space System and Method of Wireless Communication by Transmission of Radio Frequency or Optical Signals via Return Path</li>
-    <div class='bullet_details'>
-        <u>T. Benaddi</u><br>
-        status: France (FR2305491), Europe (24178564.1), USA (18/679,275), Canada (3239930)
-    </div>
-</div>
-
-<div class='bullet_entry'>
-    <li>Method for Generating a Filter Bank for Receiving a Signal Modulated by Continuous Phase Modulation, and Method for Receiving Said Signal</li>
-    <div class='bullet_details'>
-        <u>T. Benaddi</u>, C. Poulliat, M.-L. Boucheret, B. Gadat, G. Lesthievent<br>
-        status: France (FR3025386B1), Europe (EP2993847A1), USA (US9401829B2), Canada (CA2903065A1)
-    </div>
-</div>
 
 
 

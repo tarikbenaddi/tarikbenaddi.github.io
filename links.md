@@ -21,32 +21,15 @@ published: true
 
 ### Worth reading
 * [Gödel letter to von Neumann](https://www.karlin.mff.cuni.cz/~krajicek/goedel-letter.pdf) on Turing machine complexity and Growth Rate question (1956)
-
-### On optimistic research
 * [research as leisure activity](https://www.personalcanon.com/p/research-as-leisure-activity) by CELINE NGUYEN (2024)
 * [Principles of Effective Research](https://www.bumc.bu.edu/preventive-med/files/2020/06/Principls-of-effective-reserache-nielsen-0404.pdf) by Michael A. Nielsen (2004)
-
 * [You and Your Research](https://www.bumc.bu.edu/preventive-med/files/2020/06/Principls-of-effective-reserache-nielsen-0404.pdf) by Richard Hamming (1986)
-
 * [Reproducible Research: Best Practices and Potential Misuse](https://arxiv.org/pdf/1905.00645.pdf) by Emil Björnson (2019)
-
 * [How Do People Get New Ideas?](https://www.technologyreview.com/2014/10/20/169899/isaac-asimov-asks-how-do-people-get-new-ideas/) by Isaac Asimov (1959)
-
 * [The Value of Science](https://calteches.library.caltech.edu/1575/1/Science.pdf) by Richard P. Feynman (1955)
-
 * [What Would It Take to Recreate Bell Labs?](https://www.construction-physics.com/p/what-would-it-take-to-recreate-bell) by Brian Potter (2024)
-
-### On pessimistic research
-* [Don't publish with IEEE!](https://cr.yp.to/writing/ieee.html) by D. J. Bernstein.
-
 * [Allons-nous continuer la recherche scientifique?](https://www.youtube.com/watch?v=ZW9JpZXwGXc) by Alexander Grothendieck (1972)
-
-* [Le piège abscons de la recherche scientifique](https://polaris.imag.fr/romain.couillet/docs/articles/piege_abscons.pdf) by Romain Couillet (2022)
-
-* [D'autres articles anthropocene](https://polaris.imag.fr/romain.couillet/publications.html) by Romain Couillet
-
 * [The scientists who publish a paper every five days](https://fermatslibrary.com/s/the-scientists-who-publish-a-paper-every-five-days#email-newsletter) by Springer Nature (2018)
-
 * [So you got a null result. Will anyone publish it?](https://www.nature.com/articles/d41586-024-02383-9) by Nature (2024)
 
 ### For students
