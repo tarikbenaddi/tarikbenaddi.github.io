@@ -62,15 +62,16 @@ published: true
     <li>Analog Compensation of the Polarization-Dependant Loss</li>
     <div class='bullet_details'>
         <u>T. Benaddi</u>, A. Lecointre, P. Potier<br>
-        status: France, Europe, USA, Canada
+        France, Europe, USA, Canada
     </div>
 </div>
+
 
 <div class='bullet_entry'>
     <li>Space System and Method of Wireless Communication by Transmission of Radio Frequency or Optical Signals via Return Path</li>
     <div class='bullet_details'>
         <u>T. Benaddi</u><br>
-        status: France (FR2305491), Europe (24178564.1), USA (18/679,275), Canada (3239930)
+        France (FR3149452), Europe (EP4472105), USA (US20240405873), Canada (CA3239930)
     </div>
 </div>
 
@@ -78,7 +79,7 @@ published: true
     <li>Method for Generating a Filter Bank for Receiving a Signal Modulated by Continuous Phase Modulation, and Method for Receiving Said Signal</li>
     <div class='bullet_details'>
         <u>T. Benaddi</u>, C. Poulliat, M.-L. Boucheret, B. Gadat, G. Lesthievent<br>
-        status: France (FR3025386B1), Europe (EP2993847A1), USA (US9401829B2), Canada (CA2903065A1)
+        France (FR3025386B1), Europe (EP2993847A1), USA (US9401829B2), Canada (CA2903065A1)
     </div>
 </div>
 
